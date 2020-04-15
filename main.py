@@ -6,7 +6,7 @@ bot = telebot.TeleBot(API_TOKEN)
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    send_mess = "Пивееет"
+    send_mess = "Пивееет333"
     bot.send_message(message.chat.id, send_mess, parse_mode='html')
 
 
