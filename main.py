@@ -10,4 +10,10 @@ def start(message):
     bot.send_message(message.chat.id, send_mess, parse_mode='html')
 
 
+@bot.message_handler(commands=['text'])
+def text_req(message):
+    send_mess = "Пивееет111"
+    bot.send_message(message.chat.id, send_mess, parse_mode='html')
+
+
 bot.polling(none_stop=True)
