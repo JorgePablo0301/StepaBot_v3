@@ -29,5 +29,6 @@ bot.polling(none_stop=True)
 #$ git commit -am "make it better"
 #$ git push heroku master
 
+#$ git commit -am "make it better"
 #$ heroku git:clone -a stepabot3
 #$ heroku ps:scale web=1
