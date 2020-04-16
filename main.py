@@ -1,8 +1,12 @@
 import telebot
+import discogs_client_findprice
 
 API_TOKEN = '1106213214:AAH6K0eg-wIwmqHjKKaOLlX0wPVEHSEKwj0'
 
 bot = telebot.TeleBot(API_TOKEN)
+
+dcfindprice = DcFindPrice()
+
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -16,9 +20,12 @@ def text_req(message):
 
 @bot.message_handler(commands=['help'])
 def text_req(message):
-    send_mess = '''/artist - Имя артиста
+    send_mess = '''
+                /artist - Имя артиста
+                A: - Имя артиста
                 /year - Год
-                /album - Альбом
+                Y: - Год
+                /album - Альбом                
                 text - поиск
                 '''
     bot.send_message(message.chat.id, send_mess, parse_mode='html')
@@ -28,6 +35,13 @@ def text_req(message):
     send_mess = "Пивееет111"
     bot.send_message(message.chat.id, send_mess, parse_mode='html')
 
+    dcfindprice.var_name = 'Queen Sheer Heart Attack us'
+    # dcfindprice.PRINT_RESULT = 1
+    dcfindprice.main_find()
+    dcfindprice.main_findprint()
+
+    send_mess = dcfindprice.printdata
+    bot.send_message(message.chat.id, send_mess, parse_mode='html')
 
 
 bot.polling(none_stop=True)
