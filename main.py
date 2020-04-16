@@ -16,8 +16,11 @@ def text_req(message):
 
 @bot.message_handler(commands=['help'])
 def text_req(message):
-    send_mess = '''Назовите пожлуйста артиста
-                    ляляля'''
+    send_mess = '''/artist - Имя артиста
+                /year - Год
+                /album - Альбом
+                text - поиск
+                '''
     bot.send_message(message.chat.id, send_mess, parse_mode='html')
 
 @bot.message_handler(content_types=['text'])
