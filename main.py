@@ -1,5 +1,5 @@
 import telebot
-import discogs_client_findprice
+#import discogs_client_findprice
 
 API_TOKEN = '1106213214:AAH6K0eg-wIwmqHjKKaOLlX0wPVEHSEKwj0'
 
