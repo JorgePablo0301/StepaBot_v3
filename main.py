@@ -6,13 +6,25 @@ bot = telebot.TeleBot(API_TOKEN)
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    send_mess = "Пивееет333"
+    send_mess = "Пивееет"
+    bot.send_message(message.chat.id, send_mess, parse_mode='html')
+
+@bot.message_handler(commands=['artist'])
+def text_req(message):
+    send_mess = "Назовите пожлуйста артиста"
+    bot.send_message(message.chat.id, send_mess, parse_mode='html')
+
+@bot.message_handler(commands=['help'])
+def text_req(message):
+    send_mess = '''Назовите пожлуйста артиста
+                    ляляля'''
     bot.send_message(message.chat.id, send_mess, parse_mode='html')
 
 @bot.message_handler(content_types=['text'])
 def text_req(message):
     send_mess = "Пивееет111"
     bot.send_message(message.chat.id, send_mess, parse_mode='html')
+
 
 
 bot.polling(none_stop=True)
@@ -32,3 +44,4 @@ bot.polling(none_stop=True)
 #$ git commit -am "make it better"
 #$ heroku git:clone -a stepabot3
 #$ heroku ps:scale web=1
+#$ git push heroku master
