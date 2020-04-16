@@ -41,7 +41,7 @@ def text_req(message):
     #dcfindprice.main_findprint()
 
     #send_mess = dcfindprice.printdata
-    bot.send_message(message.chat.id, send_mess, parse_mode='html')
+    #bot.send_message(message.chat.id, send_mess, parse_mode='html')
 
 
 bot.polling(none_stop=True)
