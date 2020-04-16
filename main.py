@@ -5,7 +5,7 @@ API_TOKEN = '1106213214:AAH6K0eg-wIwmqHjKKaOLlX0wPVEHSEKwj0'
 
 bot = telebot.TeleBot(API_TOKEN)
 
-dcfindprice = DcFindPrice()
+#dcfindprice = DcFindPrice()
 
 
 @bot.message_handler(commands=['start'])
@@ -35,12 +35,12 @@ def text_req(message):
     send_mess = "Пивееет111"
     bot.send_message(message.chat.id, send_mess, parse_mode='html')
 
-    dcfindprice.var_name = 'Queen Sheer Heart Attack us'
+    #dcfindprice.var_name = 'Queen Sheer Heart Attack us'
     # dcfindprice.PRINT_RESULT = 1
-    dcfindprice.main_find()
-    dcfindprice.main_findprint()
+    #dcfindprice.main_find()
+    #dcfindprice.main_findprint()
 
-    send_mess = dcfindprice.printdata
+    #send_mess = dcfindprice.printdata
     bot.send_message(message.chat.id, send_mess, parse_mode='html')
 
 
