@@ -39,7 +39,7 @@ def text_req(message):
     dcfindprice.printdata = "3"
 
     # dcfindprice.PRINT_RESULT = 1
-    #dcfindprice.main_find()
+    dcfindprice.main_find()
     #dcfindprice.main_findprint()
 
     send_mess = dcfindprice.printdata
