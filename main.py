@@ -36,7 +36,7 @@ def text_req(message):
     #bot.send_message(message.chat.id, send_mess, parse_mode='html')
 
     dcfindprice.var_name = 'Queen Sheer Heart Attack us'
-    3dcfindprice.printdata = "3"
+    #dcfindprice.printdata = "3"
 
     # dcfindprice.PRINT_RESULT = 1
     dcfindprice.main_find()
