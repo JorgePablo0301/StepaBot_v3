@@ -33,15 +33,15 @@ def text_req(message):
 @bot.message_handler(content_types=['text'])
 def text_req(message):
     send_mess = "Пивееет111"
-    bot.send_message(message.chat.id, send_mess, parse_mode='html')
+    #bot.send_message(message.chat.id, send_mess, parse_mode='html')
 
     dcfindprice.var_name = 'Queen Sheer Heart Attack us'
     # dcfindprice.PRINT_RESULT = 1
-    #dcfindprice.main_find()
-    #dcfindprice.main_findprint()
+    dcfindprice.main_find()
+    dcfindprice.main_findprint()
 
-    #send_mess = dcfindprice.printdata
-    #bot.send_message(message.chat.id, send_mess, parse_mode='html')
+    send_mess = dcfindprice.printdata
+    bot.send_message(message.chat.id, send_mess, parse_mode='html')
 
 
 bot.polling(none_stop=True)
