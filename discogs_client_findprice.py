@@ -67,11 +67,11 @@ class DcFindPrice():
 # code
 ##################
 
-dcfindprice = DcFindPrice()
-dcfindprice.var_name = 'Queen Sheer Heart Attack us'
+#dcfindprice = DcFindPrice()
+#dcfindprice.var_name = 'Queen Sheer Heart Attack us'
 #dcfindprice.PRINT_RESULT = 1
-dcfindprice.main_find()
-dcfindprice.main_findprint()
-print(dcfindprice.print_data)
+#dcfindprice.main_find()
+#dcfindprice.main_findprint()
+#print(dcfindprice.print_data)
 
 
