@@ -44,11 +44,11 @@ class DcFindPrice():
             #print(self.data[1:7].lower())
             if self.data[1:7].lower().__eq__('master'):
                 self.master_lnk_string = 'master'
-                print(self.master_lnk_string)
+                #print(self.master_lnk_string)
             parser = parse_price_discog.DiscogParser()
             #parser.getLinks("https://www.discogs.com/release/" + str(x.id))
             strlink="https://www.discogs.com/"+self.master_lnk_string+"/" + str(x.id)
-            print(strlink)
+            #print(strlink)
             parser.getLinks(strlink)
             self.pricehighest = parser.pricenamehighest + parser.pricehighest
             self.pricemedian = parser.pricenamemedian + parser.pricemedian
