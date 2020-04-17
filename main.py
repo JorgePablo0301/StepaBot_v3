@@ -42,7 +42,7 @@ def text_req(message):
     dcfindprice.main_find()
     dcfindprice.main_findprint()
 
-    send_mess = str(dcfindprice.printdata)
+    send_mess = str(dcfindprice.printdata)+'3'
     bot.send_message(message.chat.id, send_mess, parse_mode='html')
 
 
