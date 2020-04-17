@@ -33,9 +33,11 @@ def text_req(message):
 @bot.message_handler(content_types=['text'])
 def text_req(message):
     send_mess = "Пивееет111"
+    getmessagetext_bot = message.text.stprip().lower()
     #bot.send_message(message.chat.id, send_mess, parse_mode='html')
 
     dcfindprice.var_name = 'Queen Sheer Heart Attack us'
+    dcfindprice.var_name = getmessagetext_bot
     #dcfindprice.printdata = "3"
     # dcfindprice.PRINT_RESULT = 1
     dcfindprice.main_find()
