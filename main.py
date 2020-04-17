@@ -35,14 +35,14 @@ def text_req(message):
     send_mess = "Пивееет111"
     #bot.send_message(message.chat.id, send_mess, parse_mode='html')
 
+    send_mess = str(dcfindprice.print_data)
+    bot.send_message(message.chat.id, send_mess, parse_mode='html')
+
     dcfindprice.var_name = 'Queen Sheer Heart Attack us'
     #dcfindprice.printdata = "3"
     # dcfindprice.PRINT_RESULT = 1
     dcfindprice.main_find()
     dcfindprice.main_findprint()
-
-    send_mess = str(dcfindprice.print_data)
-    bot.send_message(message.chat.id, send_mess, parse_mode='html')
 
 
 bot.polling(none_stop=True)
