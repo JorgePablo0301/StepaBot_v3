@@ -41,7 +41,7 @@ def text_req(message):
     dcfindprice.main_find()
     dcfindprice.main_findprint()
     print(dcfindprice.print_data)
-    #send_mess = dcfindprice.print_data
+    send_mess = dcfindprice.title
     bot.send_message(message.chat.id, send_mess, parse_mode='html')
 
 
